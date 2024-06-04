@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "74260c91-6a25-43b6-af38-713c6b905cb4",
+		"name": "GML Software - Alianza",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bGVub3ZvYTRAbWlzZW5hLmVkdS5jbw==\",\r\n    \"password\": \"THVjaG8uLjEwNzA=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/v1/users/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients CRUD",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/v1/clients/list/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Created",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bussinessId\": \"Prueba Prueba3\",\r\n    \"email\": \"prueba3@gmail.com\",\r\n    \"phone\": \"3168957412\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/v1/clients/created/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"created",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modified",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 3,\r\n        \"sharedKey\": \"PPrueba3\",\r\n        \"bussinessId\": \"Prueba Prueba3\",\r\n        \"email\": \"prueba3hhhg@gmail.com\",\r\n        \"phone\": \"3102568942\",\r\n        \"dataAdded\": [\r\n            2024,\r\n            5,\r\n            31,\r\n            0,\r\n            59,\r\n            33\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/v1/clients/modified/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"modified",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/v1/clients/deleted/?id=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"deleted",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/v1/clients/search/?alias=PPrueba2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "alias",
+									"value": "PPrueba2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Advanced Search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": null,\r\n    \"phone\": null,\r\n    \"email\": \"prueba1@gmail.com\",\r\n    \"startDate\": null,\r\n    \"endDate\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/v1/clients/advanced-search/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"advanced-search",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 3,\r\n        \"sharedKey\": \"PPrueba3\",\r\n        \"bussinessId\": \"Prueba Prueba3\",\r\n        \"email\": \"prueba3hhhg@gmail.com\",\r\n        \"phone\": \"3102568942\",\r\n        \"dataAdded\": [\r\n            2024,\r\n            5,\r\n            31,\r\n            0,\r\n            59,\r\n            33\r\n        ]\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/v1/clients/export/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"v1",
+								"clients",
+								"export",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsZW5vdm9hNEBtaXNlbmEuZWR1LmNvIiwiVXNlcklEIjoxLCJBdXRob3JpdHkiOlt7ImF1dGhvcml0eSI6IlVTRVIifV0sImlhdCI6MTcxNzQ0NzM4OCwiZXhwIjoxNzE3NDUwOTg4fQ.YWJ3wiRF8sDTqJYtKFMAEQuCh2tw_67fb1uaLUlATshlNtveuc2eJdOmDHDKQgJOUHRSkNc5KFm_NS51QdEV3Q",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
